@@ -1,39 +1,39 @@
-          font-size: 1rem;
-            opacity: 0.9;
-            line-height: 1.7;
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMPT STORAGE - スマホ特化型のAIプロンプト管理・コピペツール</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- 基本設定（知的なディープブルー基調） --- */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --accent-color: #1a73e8; /* 鮮やかなブルー */
+            --accent-gradient: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            --text-main: #334155;
+            --text-sub: #64748b;
+            --text-dark: #0f172a;
         }
 
-        /* --- 2つ目のモックアップセクション --- */
-        .secondary-showcase {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 40px 0 100px;
-            gap: 40px;
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
-        .secondary-showcase .hero-content {
-            order: 2;
-        }
-
-        .secondary-showcase .phone-wrapper {
-            order: 1;
-        }
-
-        /* --- フッター --- */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--text-sub);
-            font-size: 0.9rem;
-            border-top: 1px solid #cbd5e1;
-        }
-
-        /* プライバシーポリシーリンクのスタイル */
-        .privacy-link {
-            display: inline-block;
-            margin-bottom: 12px;
-            color: var(--text-
+        body {
+            margin: 0;
+            padding: 0;
+            /* スマホのシステムフォントを優先し、可読性を向上 */
+            font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            letter-spacing: 0.03em;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* --- レイアウト共通 --- */
@@ -78,6 +78,11 @@
             margin: 0 0 24px 0;
             color: var(--text-dark);
             font-weight: 700;
+        }
+
+        /* 2つ目のショーケース用H3見出しのPCサイズ初期値 */
+        .secondary-showcase .hero-title {
+            font-size: 2.2rem;
         }
 
         .hero-description {
@@ -317,8 +322,12 @@
             
             /* スマホでの文字サイズと余白の最適化 */
             .hero-title {
-                font-size: 2rem;
+                font-size: 1.45rem; /* 1.7remからさらに縮小 */
                 margin-bottom: 16px;
+            }
+            /* 2つ目のショーケース用H3見出しのスマホサイズ */
+            .secondary-showcase .hero-title {
+                font-size: 1.35rem; /* 全体のバランスを合わせるため1.5remから少し縮小 */
             }
             .hero-description {
                 font-size: 1rem;
@@ -326,14 +335,17 @@
                 text-align: left; /* 各セクションの解説文pを左寄せに変更 */
             }
             .section-title {
-                font-size: 1.4rem;
+                font-size: 1.25rem; /* 1.4remからさらに縮小 */
             }
             .section-subtitle {
                 font-size: 1rem;
                 margin-bottom: 30px;
             }
+            .feature-item h3 {
+                font-size: 1.1rem;
+            }
             .impact-content h3 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             .impact-content p {
                 text-align: left; /* 導入効果の文章pを左寄せに変更 */
@@ -382,6 +394,91 @@
         <div class="hero-content">
             <h2 class="hero-title">最もスマートな<br>AIプロンプト管理アプリ<br>画面を変えずにプロンプトを呼び出そう</h2>
             <p class="hero-description">
+                スマホでのAI運用に特化したプロンプト保存の無料アプリです。<br>よく使うプロンプトは、通知バーから簡単にコピーができます。<br>あとはAIチャットに張り付けるだけ。
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.orishin.prompt_storage" class="btn" target="_blank" rel="noopener noreferrer">
+                Google Play でダウンロード
+            </a>
+        </div>
+
+        <div class="phone-wrapper">
+            <div class="phone-mockup">
+                <video autoplay muted loop playsinline>
+                    <source src="prompt_clip2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2 class="section-title">スマホでのAI活用に特化</h2>
+        <p class="section-subtitle">定型文の呼び出しから高度な変数埋め込みまで、モバイル環境でのプロンプト運用を一新します。</p>
+        
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">📋</div>
+                <h3>ワンタップ・コピペ</h3>
+                <p>登録したプロンプトはリストからワンタップするだけでコピー完了。<br>従来のメモアプリからテキストコピーする必要なし。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📁</div>
+                <h3>タグ・カテゴリ管理</h3>
+                <p>「文章生成」「画像生成」「アイディア出し」など、用途に応じた分類が可能。プロンプトの量が増えても、迷うことなく瞬時に目的の文章にアクセスできます。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <h3>クイック通知バー対応</h3>
+                <p>お気に入り登録したプロンプトは通知バーから呼び出し可能。<br>AIアプリを開いたままプロンプトを呼び出すことができます。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <h2 class="section-title">プロンプト保存アプリの<br>圧倒的な生産性</h2>
+        <p class="section-subtitle">「探す・入力する」の無駄な時間を、すべてクリエイティブな時間に投下。</p>
+        <div class="impact-card">
+            <div class="impact-content">
+                <h3>⏱️ 入力時間を最大90%削減</h3>
+                <p>毎回同じような前提条件や指示を手入力したり、過去のチャット履歴からスクロールして探す手間を完全に排除。スマホ特有のタイピングストレスから解放され、AIとの対話速度が劇的に向上します。</p>
+            </div>
+            <div class="impact-content">
+                <h3>💡 出力精度の安定化と最適化</h3>
+                <p>「上手くいった指示文」を最高の状態で資産化。スマホからでも常にクオリティの高いプロンプトを一貫して送信できるため、AIからの返答品質が安定し、手戻りのないスマートなアウトプットが得られます。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secondary-showcase">
+        <div class="hero-content">
+            <h3 class="hero-title">Prompt Storageの<br>「変数登録機能」</h3>
+            <p class="hero-description">
+                保存するプロンプト内にコピー時に自由に記述可能な「変数」を含めることができます。<br>例えば「文字数」などをプロンプトに入れておけば、コピーするたびに文字数を指定することが可能に。
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.orishin.prompt_storage" class="btn" target="_blank" rel="noopener noreferrer">
+                無料で使ってみる
+            </a>
+        </div>
+
+        <div class="phone-wrapper">
+            <div class="phone-mockup">
+                <video autoplay muted loop playsinline>
+                    <source src="prompt_clip1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <a href="https://orm4n5.github.io/privacy_promptstorage.html" class="privacy-link">プライバシーポリシー</a>
+    <p>&copy; 2026 PROMPT STORAGE All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
                 スマホでのAI運用に特化したプロンプト保存の無料アプリです。<br>よく使うプロンプトは、通知バーから簡単にコピーができます。<br>あとはAIチャットに張り付けるだけ。
             </p>
             <a href="https://play.google.com/store/apps/details?id=com.orishin.prompt_storage" class="btn" target="_blank" rel="noopener noreferrer">
