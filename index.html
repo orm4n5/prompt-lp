@@ -86,7 +86,7 @@
             margin: 0 0 32px 0;
         }
 
-        /* --- スマホモックアップ共通スタイル --- */
+        /* --- スマホモックアップ共通スタイル（カラーを黒に変更） --- */
         .phone-wrapper {
             flex: 1;
             display: flex;
@@ -97,11 +97,11 @@
         .phone-mockup {
             width: 280px;
             height: 580px;
-            background: #ffffff;
-            border: 8px solid #cbd5e1;
+            background: #000000;
+            border: 8px solid #1e293b; /* ダークグレー・ブラックのフレームに変更 */
             border-radius: 36px;
             position: relative;
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
             overflow: hidden;
         }
 
@@ -113,7 +113,7 @@
             transform: translateX(-50%);
             width: 120px;
             height: 25px;
-            background: #cbd5e1;
+            background: #1e293b; /* ノッチの色をフレームに統合 */
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             z-index: 10;
@@ -346,10 +346,12 @@
             .phone-mockup {
                 width: 250px;
                 height: 520px;
+                border: 6px solid #0f172a; /* スマホ画面では枠線を少し細くしてスタイリッシュに */
             }
             .phone-mockup::after {
                 width: 100px;
                 height: 22px;
+                background: #0f172a;
             }
             
             .features-section {
@@ -407,8 +409,8 @@
             </div>
             <div class="feature-item">
                 <div class="feature-icon">✨</div>
-                <h3>変数登録機能</h3>
-                <p>文字数や目的など、都度条件が変わるものについては「変数」登録をしておけば、その部分だけコピー時に変更することができます。</p>
+                <h3>プレミアム編集</h3>
+                <p>プレミアム版では、アプリ内で直接高度なプロンプトの作成・編集が可能に。モバイルワークの可能性をさらに広げる専用エディタを搭載しています。</p>
             </div>
         </div>
     </section>
